@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="it"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Segnapunti Tressette&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: -apple-system, BlinkMacSystemFont, sans-serif;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 500px; margin: auto; padding: 20px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f4f4f9; color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1 { text-align: center; margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h2 { margin-top: 1.5rem; color: #444; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>input, select, button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.1rem; padding: 10px; margin: 8px 0; width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px; border: 1px solid #ccc;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #007AFF; color: white; border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold; cursor: pointer;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: background 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button:hover { background: #005BBB; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hidden { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.error { color: #D8000C; font-weight: bold; margin-top: 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.player {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: white;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px; margin: 10px 0;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.score { font-weight: bold; color: #007AFF; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>ul { list-style: none; padding: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>li {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: white; margin: 5px 0; padding: 10px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px; display: flex; justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 1px 3px rgba(0,0,0,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Segnapunti Tressette&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="setup"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;label&gt;Numero giocatori:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;select id="numPlayers"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;option value="4"&gt;4&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;option value="5"&gt;5&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="playerNames"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="startGame()"&gt;Avvia partita&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="game" class="hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Inserisci punteggi manche&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="roundInputs"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p id="error" class="error"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="confirmRound()"&gt;Conferma manche&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Classifica&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;ul id="ranking"&gt;&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let players = [];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let points = [];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function startGame() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const num = parseInt(document.getElementById("numPlayers").value);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>players = [];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>for (let i = 0; i &lt; num; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const name = document.getElementById("name" + i).value || "Giocatore " + (i+1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>players.push({ name: name, score: 0 });</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>points = Array(num).fill(0);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("setup").classList.add("hidden");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("game").classList.remove("hidden");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderRoundInputs();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderRanking();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderPlayerInputs() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const num = parseInt(document.getElementById("numPlayers").value);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const container = document.getElementById("playerNames");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>container.innerHTML = "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>for (let i = 0; i &lt; num; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>container.innerHTML += `&lt;input id="name${i}" placeholder="Nome giocatore ${i+1}"&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderRoundInputs() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const container = document.getElementById("roundInputs");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>container.innerHTML = "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>players.forEach((p, i) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>container.innerHTML += `</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="player"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;${p.name}&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="number" id="point${i}" value="0" min="0" max="21"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function confirmRound() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let total = 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>for (let i = 0; i &lt; players.length; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>points[i] = parseInt(document.getElementById("point"+i).value) || 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>total += points[i];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (total !== 21) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("error").textContent = "La somma deve essere 21 (ora è " + total + ")";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("error").textContent = "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>for (let i = 0; i &lt; players.length; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>players[i].score += points[i];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderRoundInputs();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderRanking();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderRanking() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const ranking = document.getElementById("ranking");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>ranking.innerHTML = "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>players</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slice()</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.sort((a,b) =&gt; b.score - a.score)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.forEach(p =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>ranking.innerHTML += `&lt;li&gt;&lt;span&gt;${p.name}&lt;/span&gt;&lt;span class="score"&gt;${p.score}&lt;/span&gt;&lt;/li&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// inizializza input nomi</p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderPlayerInputs();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("numPlayers").addEventListener("change", renderPlayerInputs);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
